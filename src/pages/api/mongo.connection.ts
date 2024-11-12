@@ -22,6 +22,10 @@ export class MongoConnection implements DatabaseConnection {
         }
     }
 
+    async close() {
+        await this.client.close();
+    }
+
     async getCollection(collectionName: string) {
         const db = this.client.db(this.dbName);
         return db.collection(collectionName);
