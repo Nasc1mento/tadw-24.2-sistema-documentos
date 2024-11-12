@@ -17,18 +17,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     switch (method) {
       case 'GET':
-        await collection.find({}).toArray().then((docs) => {
-          res.status(200).json(docs);
-        });
+        const docs =  await collection.find({}).toArray();
+        res.status(200).json(docs);
 
         break;
   
       case 'POST':
         const newDocument = req.body;
   
-        await collection.insertOne(newDocument).then(() => {
-          res.status(201).json(newDocument);
-        });
+        await collection.insertOne(newDocument);
+        res.status(201).json(newDocument);
 
         break;
   
