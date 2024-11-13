@@ -1,13 +1,10 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import { IDocumento } from './api/mysql/documentos/documento';
 
-interface Document {
-  id: string;
-  tipo: string;
-}
 
 const Docs = () => {
-  const [data, setData] = useState<Document[]>([]);
+  const [data, setData] = useState<IDocumento[]>([]);
 
   // fetch data from API when component mounts
   useEffect(() => {
