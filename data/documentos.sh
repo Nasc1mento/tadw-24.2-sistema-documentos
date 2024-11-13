@@ -12,7 +12,7 @@ curl -d '{
   "departamento": "Financeiro",
   "data": "2024-03-31"
   }
-}' -H "Content-Type: application/json" -X POST http://localhost:3000/api/documentos]
+}' -H "Content-Type: application/json" -X POST http://localhost:3000/api/documentos
 
 
 #POST Documento academico
@@ -25,4 +25,4 @@ curl -d '{
 			"areaEstudo": "Inteligência Artificial",
 			"doi": "10.1234/ai.2023.001"
 		}
-} -H "Content-Type: application/json" -X POST http://localhost:3000/api/documentos
+}' -H "Content-Type: application/json" -X POST http://localhost:3000/api/documentos
