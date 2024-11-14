@@ -5,7 +5,7 @@
 CREATE TABLE documentos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(255) NOT NULL,
-    tipo ENUM('ACADEMICO', 'FINANCEIRO'),
+    tipo ENUM('academico', 'financeiro'),
     conteudo VARCHAR(255) NOT NULL
 );
 

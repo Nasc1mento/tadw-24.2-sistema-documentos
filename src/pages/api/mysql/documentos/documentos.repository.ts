@@ -1,6 +1,6 @@
 import { Connection, ResultSetHeader } from "mysql2";
 import { IDocumento, TipoDocumento } from "./documento";
-import { IDocumentoRepository } from "./documentos.interface.repository";
+import IDocumentoRepository from "./documentos.interface.repository";
 import MySqlConnection from "../conexao";
 
 export default class DocumentosRepository implements IDocumentoRepository {
@@ -68,10 +68,8 @@ export default class DocumentosRepository implements IDocumentoRepository {
                 (error, results) => {
                     if (error) 
                         reject(error);
-                    else {
-                        resolve(results);
-                        console.log(results);
-                    }    
+                    else
+                        resolve(results); 
                 }
             )
         });

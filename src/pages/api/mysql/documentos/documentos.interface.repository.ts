@@ -1,6 +1,6 @@
 import { IDocumento } from "./documento";
 
-export interface IDocumentoRepository {
+export default interface IDocumentoRepository {
     save(documento: IDocumento): Promise<IDocumento>;
     getAll(): Promise<IDocumento[]>;
 }

@@ -5,7 +5,7 @@ export enum TipoDocumento  {
     ACADEMICO = 'academico',
 }
 
-export interface IDocumento extends RowDataPacket{
+export interface IDocumento extends RowDataPacket {
     id: number;
     titulo: string;
     conteudo: string;

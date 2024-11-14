@@ -1,12 +1,6 @@
-// pages/api/documentos.js
-import fs from 'fs';
-import path from 'path';
-
 // import req and res from Next.js API
 import type { NextApiRequest, NextApiResponse } from 'next';
 import DocumentosRepository from './mysql/documentos/documentos.repository';
-
-const filePath = path.join(process.cwd(), 'data', 'documentos.json');
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;

@@ -1,5 +1,6 @@
 import mysql, { Connection } from "mysql2";
-  
+import { env } from "../env/env";
+
 
 export default class MySqlConnection {
 
@@ -8,11 +9,11 @@ export default class MySqlConnection {
   public static getConnection(): Connection {
     if (!this.connection) {
       this.connection = mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        database: "tadw",
-        port: 3306,
-        password: "root",
+        host: env.DB_HOST,
+        user: env.DB_USER,
+        database: env.DB_DATABASE,
+        port: env.DB_PORT,
+        password: env.DB_PASSWORD
       });
     }
     return this.connection;
@@ -23,5 +24,4 @@ export default class MySqlConnection {
       this.connection.end();
     }
   }
-
 }
